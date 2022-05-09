@@ -1,13 +1,11 @@
 const configuration = require("./jest.config.base");
 
-configuration.clearMocks = false;
-configuration.collectCoverage = false;
-configuration.collectCoverageFrom = undefined;
-configuration.coverageDirectory = undefined;
-configuration.coverageProvider = 'v8';
-
-configuration.testMatch = [
-  "<rootDir>/**/jest-sandbox/**/?(*.)+(spec|test).[tj]s?(x)",
-];
-
-module.exports = configuration;
+module.exports = {
+  ...configuration,
+  clearMocks: false,
+  collectCoverage: false,
+  collectCoverageFrom: undefined,
+  coverageDirectory: undefined,
+  coverageProvider: "v8",
+  testMatch: ["<rootDir>/**/jest-sandbox/**/?(*.)+(spec|test).[tj]s?(x)"],
+};
