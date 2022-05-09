@@ -1,4 +1,4 @@
-const configuration = require("./jest.config");
+const configuration = require("./jest.config.base");
 
 configuration.clearMocks = false;
 
