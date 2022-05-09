@@ -10,10 +10,14 @@ module.exports = {
         script: "jest --watch",
         description: "run in the amazingly intelligent Jest watch mode",
       },
-      mockrcr: {
-        script: "jest --config=./jest-configurations/jest.config.no-clear-mock.js",
+      mockcrr: {
+        script: "jest --config=./jest.config.no-clear-mock.js",
         description: "run to compare mockReset & mockClear & mockRestore",
-      }
+      },
+      sandbox: {
+        script: "jest --config=./jest.config.sandbox.js",
+        description: "run to test sandbox if some mocks influence other files",
+      },
     },
     build: {
       default: "vite build",
